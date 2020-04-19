@@ -76,11 +76,11 @@ if __name__ == "__main__":
     parser.add_argument(
         "action",
         choices=("up", "down"),
-        help="whether to migrate or revert a migration"
+        help="whether to nimbus-migrate or revert a migration"
     )
     parser.add_argument(
         "db",
-        help="the sqlite database file to migrate",
+        help="the sqlite database file to nimbus-migrate",
     )
     parser.add_argument(
         "--dir",
