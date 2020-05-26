@@ -53,13 +53,13 @@ class Migration:
                         if name not in self._ran_migrations:
                             with open(os.path.join(self._mig_dir, file)) as f:
                                 sql = f.read()
-                                self.run_migration(os.path.join(sql, file), name)
+                                self.run_migration(sql, name)
                     elif not self._up and file.endswith('.dn.sql'):
                         name = file[:-7]
                         if name in self._ran_migrations:
                             with open(os.path.join(self._mig_dir, file)) as f:
                                 sql = f.read()
-                                self.run_migration(os.path.join(sql, file), name, False)
+                                self.run_migration(sql, name, False)
         except sqlite3.Error as e:
             print(f"Error executing SQL for migration '{name}': {e}")
         except Exception as e:
