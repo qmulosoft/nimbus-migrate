@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nimbus_migrate"
+version = "0.1.0"
+description = "A simple migration library for nimbus cloud apps and services"
+authors = ["Zach Bullough <zbullough@qmulosoft.com>"]
+license = "MIT"
+packages = [
+    { include = "migrate", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=1.00"]
+build-backend = "poetry.masonry.api"
+
